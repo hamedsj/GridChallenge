@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.GridChallenge" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+</resources>
