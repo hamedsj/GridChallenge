@@ -58,7 +58,11 @@ class ComposeGridActivity : AppCompatActivity() {
         ) {
             items(
                 count = gridState.list.size / 3,
-                key = { index -> gridState.list[index].id },
+                key = { index ->
+                    gridState.list[index * 3].id +
+                            if (gridState.list.size > index * 3 + 1) gridState.list[index * 3 + 1].id else "" +
+                                    if (gridState.list.size > index * 3 + 2) gridState.list[index * 3 + 2].id else ""
+                },
             ) { index ->
                 if (index % 6 == 0) {
                     BigTwoLeftItem(
