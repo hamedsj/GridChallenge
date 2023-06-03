@@ -5,6 +5,7 @@ import androidx.core.view.setMargins
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import java.lang.Integer.max
+import java.lang.Integer.min
 
 class HamidGridLayoutManager: RecyclerView.LayoutManager() {
 
@@ -37,12 +38,7 @@ class HamidGridLayoutManager: RecyclerView.LayoutManager() {
             getDecoratedBottom(lastItem) + (lastItem.layoutParams as MarginLayoutParams).bottomMargin
         } ?: 0
 
-        if (dy > 0 && lastItemEnd <= height) {
-            verticalScrollOffset = max(verticalScrollOffset + (lastItemEnd - height), 0)
-            fill(recycler = recycler)
-            return verticalScrollOffset - lastScrollOffset
-        }
-        verticalScrollOffset = max(verticalScrollOffset + dy, 0)
+        verticalScrollOffset = min(max(verticalScrollOffset + dy, 0), verticalScrollOffset + (lastItemEnd - height))
         fill(recycler = recycler)
         return verticalScrollOffset - lastScrollOffset
     }
