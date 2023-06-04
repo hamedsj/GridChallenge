@@ -50,7 +50,6 @@ class HamidGridLayoutManager: RecyclerView.LayoutManager() {
             addView(view)
             val size = width / 3
             val lp = view.layoutParams as RecyclerView.LayoutParams
-            lp.setMargins(2.toPx(view.context))
             lp.width = size
             lp.height = size
             view.layoutParams = lp

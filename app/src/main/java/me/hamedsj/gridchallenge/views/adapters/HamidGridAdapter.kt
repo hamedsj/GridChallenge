@@ -12,7 +12,7 @@ class HamidGridAdapter(var items: List<String>): RecyclerView.Adapter<HamidGridA
     class ViewHolder(val binding: ItemViewGridBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemViewGridBinding.inflate(LayoutInflater.from(parent.context)))
+        return ViewHolder(ItemViewGridBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun getItemCount(): Int = items.size
