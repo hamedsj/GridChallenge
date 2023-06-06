@@ -10,7 +10,7 @@ https://github.com/hamedsj/GridChallenge/assets/17751865/6116d2b1-7325-4a80-8843
 * ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 
 ## What you can learn from this?
-### You can learn how to use:
+### You can learn:
 - How to Write your own LayoutManager in order to having custom designed RecyclerView
 - How to build custom designed column using jetpack compose components
 - How the GridLayoutManager and LinearLayoutManager are working behind the scene
